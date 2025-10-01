@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-/*#if canImport(LLDBUISwiftUILib)
-import LLDBUISwiftUILib
-#endif
-*/
+
+#if canImport(LLDBUISwiftUIFW)
 import LLDBUISwiftUIFW
+#endif
 
 struct ContentView: View {
     @State private var showAlert = false
@@ -19,11 +18,12 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            Image("AppIconImage")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .shadow(radius: 5)
             Text("Hello, world!")
-            /*Button("Action", action: {
-                var msgBox = Alert(title: Text("Action MSG"))
-                msgBox->
-            })*/
             VStack {
                 Button("Show Alert") {
                     showAlert = true
@@ -31,12 +31,6 @@ struct ContentView: View {
                 Button("Show FW Hello World Alert") {
                     LLDBUISwiftUIFWClass.showHelloWorldAlert()
                 }
-                /*#if canImport(LLDBUISwiftUILib)
-                Button("Show Framework Alert") {
-                    LLDBUISwiftUILibClass.testFunct()
-                }
-                #endif*/
-                
             }
             .alert("Important Message", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }

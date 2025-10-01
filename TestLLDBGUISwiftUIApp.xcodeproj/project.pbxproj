@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550C81A22E8D4FAC0042D1CC /* CREDITS.md in Resources */ = {isa = PBXBuildFile; fileRef = 550C81A12E8D4FAC0042D1CC /* CREDITS.md */; };
+		550C81A32E8D4FAC0042D1CC /* CREDITS.md in Resources */ = {isa = PBXBuildFile; fileRef = 550C81A12E8D4FAC0042D1CC /* CREDITS.md */; };
 		55EDEC532E8C31BD00E0874C /* LLDBUISwiftUIFW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EDEC4B2E8C31BD00E0874C /* LLDBUISwiftUIFW.framework */; };
 		55EDEC552E8C31BD00E0874C /* LLDBUISwiftUIFW.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55EDEC4B2E8C31BD00E0874C /* LLDBUISwiftUIFW.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -46,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		550C81A12E8D4FAC0042D1CC /* CREDITS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CREDITS.md; sourceTree = "<group>"; };
 		55D4896F2E8BF93B008A9A55 /* TestLLDBGUISwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLLDBGUISwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EDEC2F2E8C2BCA00E0874C /* libLLDBUISwiftUILib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libLLDBUISwiftUILib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		55EDEC4B2E8C31BD00E0874C /* LLDBUISwiftUIFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLDBUISwiftUIFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,7 @@
 		55D489662E8BF93B008A9A55 = {
 			isa = PBXGroup;
 			children = (
+				550C81A12E8D4FAC0042D1CC /* CREDITS.md */,
 				55D489712E8BF93B008A9A55 /* TestLLDBGUISwiftUIApp */,
 				55EDEC4C2E8C31BD00E0874C /* LLDBUISwiftUIFW */,
 				55EDEC3D2E8C2DC000E0874C /* Frameworks */,
@@ -267,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550C81A32E8D4FAC0042D1CC /* CREDITS.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550C81A22E8D4FAC0042D1CC /* CREDITS.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -446,6 +453,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/TestLLDBGUISwiftUIApp/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -478,6 +487,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/TestLLDBGUISwiftUIApp/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
