@@ -13,6 +13,8 @@ import LLDBUISwiftUIFW
 
 struct ContentView: View {
     @State private var showAlert = false
+    @State private var showNameInput = false
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -31,11 +33,44 @@ struct ContentView: View {
                 Button("Show FW Hello World Alert") {
                     LLDBUISwiftUIFWClass.showHelloWorldAlert()
                 }
+                Button("Ask for name") {
+                    showNameInput = true
+                }
+                NavigationLink("Go to Name Input", destination: NameInputView())
             }
             .alert("Important Message", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
                 Text("This is an alert in SwiftUI.")
+            }
+        }
+        .sheet(isPresented: $showNameInput) {
+            NameInputView()
+        }
+        .padding()
+    }
+}
+
+struct NameInputView: View {
+    @Environment(\.dismiss) var dismiss
+    @State private var name = ""
+    @State private var showAlert = false
+
+    var body: some View {
+        VStack(spacing: 20) {
+            TextField("Enter your name", text: $name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .frame(width: 300)
+
+            Button("Confirm") {
+                showAlert = true
+            }
+            Button("Done") {
+                dismiss()
+            }
+            .alert("Hello, \(name)!", isPresented: $showAlert) {
+                Button("OK", role: .cancel) { }
             }
         }
         .padding()
@@ -45,4 +80,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
